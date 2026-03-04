@@ -126,7 +126,7 @@ const UIManager = {
         const rawMessage = CONFIG.getAutoMessage();
         const encodedMessage = encodeURIComponent(rawMessage);
         this.waGeneratedUrl = `https://wa.me/${CONFIG.waNumber}?text=${encodedMessage}`;
-        
+        this.waNumberUrl = `https://wa.me/${CONFIG.waNumber}`;
         this.elements.waAutoAction.setAttribute('href', this.waGeneratedUrl);
         this.elements.waAutoAction.setAttribute('target', '_blank');
         this.elements.waAutoAction.setAttribute('rel', 'noopener noreferrer');
@@ -207,7 +207,7 @@ const UIManager = {
         const iconElement = button.querySelector('i');
 
         try {
-            await navigator.clipboard.writeText(this.waGeneratedUrl);
+            await navigator.clipboard.writeText(this.waNumberUrl);
             this.animateCopyButton(iconElement);
             this.showModal('success', 'Tautan Disalin', 'Tautan WhatsApp dengan pesan otomatis telah disalin ke papan klip Anda.');
         } catch (error) {
