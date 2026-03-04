@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shey - Digital Profile</title>
+    <link rel="stylesheet" href="../public/css/main.css">
+    <script src="https://kit.fontawesome.com/cce81db6df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="custom-modal" id="notificationModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-icon-container" id="modalIconContainer">
+            </div>
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <p class="modal-desc" id="modalDesc"></p>
+            <button class="modal-btn" id="closeModalBtn">Tutup</button>
+        </div>
+    </div>
+
+    <main class="app-container">
+        <div class="page-content" id="pageContent">
+            
+            <section class="video-banner-container stagger-fade" style="--anim-delay: 0s">
+                <video class="video-banner-element" autoplay loop muted playsinline>
+                    <source src="../public/images/banner.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </section>
+
+            <header class="profile-header stagger-slide" style="--anim-delay: 0.1s">
+                <div class="profile-avatar-wrapper anim-scale">
+                    <img src="../public/images/profile.jpg" alt="Shey" class="profile-avatar" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmYjNjNiI+PHBhdGggZD0iTTEyIDJhNSA1IDAgMSAwIDAgMTAgNSA1IDAgMCAwIDAtMTB6bTAgOGEzIDMgMCAxIDEgMC02IDMgMyAwIDAgMSAwIDZ6bTkgMTFoLTF2LTFhNyA3IDAgMCAwLTctN2gtMmE3IDcgMCAwIDAtNyA3diFoLTF2LTFhOCA4IDAgMCAxIDgtOGgyYTggOCAwIDAgMSA4IDh2MXoiLz48L3N2Zz4='">
+                </div>
+                <h1 class="profile-name">Shey</h1>
+                <p class="profile-role">Content Creator</p>
+                <p class="profile-bio">mau paid edit? silahkan hubungi aku via whatsapp!</p>
+            </header>
+
+            <section class="link-section stagger-slide" style="--anim-delay: 0.2s">
+                <div class="link-item-container" id="waAutoLinkContainer">
+                    <a href="#" class="link-action-centered" id="waAutoAction">
+                        <i class="fa-brands fa-whatsapp link-icon-inline"></i>
+                        <span class="link-text-centered">WhatsApp</span>
+                    </a>
+                    <button class="link-copy-btn" id="waCopyBtn">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="form-section stagger-slide" style="--anim-delay: 0.3s">
+                <h2 class="form-title">Pesan Manual</h2>
+                <form class="contact-form" id="waManualForm">
+                    <div class="form-group">
+                        <textarea id="manualMessage" name="message" class="form-textarea" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn" id="waSubmitBtn">
+                        <i class="fa-brands fa-whatsapp form-btn-icon"></i>
+                        <span>Kirim via WhatsApp</span>
+                    </button>
+                </form>
+            </section>
+
+            <footer class="profile-footer stagger-slide" style="--anim-delay: 0.4s">
+                <p class="copyright-text">&copy; 2026 Shey. All rights reserved.</p>
+            </footer>
+        </div>
+    </main>
+
+    <script type="module" src="../public/js/main.js"></script>
+</body>
+</html>
